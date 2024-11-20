@@ -18,24 +18,29 @@
    Daftar di [GitHub](https://github.com/join).  
 3. **Konfigurasi Git:**  
    ```bash
-   git config --global user.name "username"
-   git config --global user.email "email"
+   git config --global user.name [username]
+   git config --global user.email [email]
    ```  
+   ![Alt Text](images/gitconfig.png)
 4. **Tambahkan SSH Key:**  
    - Masuk ke GitHub > **Settings > SSH and GPG Keys > New SSH Key**.  
    - Buat key di Git Bash:  
      ```bash
-     ssh-keygen -t ed25519 -C "email"
+     ssh-keygen -t ed25519 -C [email]
      ```  
+     ![Alt Text](images/sshkeygen.png)
    - Salin key dengan:  
      ```bash
      clip < ~/.ssh/id_ed25519.pub
      ```  
-    - Atau dengan:  
+    - Atau dengan menggunakan cat lalu di copy:  
      ```bash
-    cat /.ssh/id_ed25519.pub
+     cat [lokasi dari id_ed25519.pub (ex: /.ssh/id_ed25519.pub)]
      ```  
+     ![Alt Text](images/catsshkey.png)
    - Paste ke GitHub di **New SSH Key**.  
+     ![Alt Text](images/sshkeygithub.png)
+     ![Alt Text](images/sshkeysshow.png)
 
 ---
 
@@ -49,16 +54,19 @@
      - Buka cmd di folder tersebut, lalu jalankan:  
        ```bash
        git init
-       git remote add origin "link SSH"
+       git remote add origin [link repo SSH yang dituju]
        git branch -M main
        git pull origin main
        ```  
+       ![Alt Text](images/copyrepomanual.png)
    - **Git Clone:**  
      - Jalankan:  
        ```bash
-       git clone "link SSH"
+       git clone [link repo SSH yang ingin diclone]
        ```  
+       ![Alt Text](images/gitclone1.png)
      - Folder repository akan muncul di lokasi Anda.  
+       ![Alt Text](images/folderbarun.png)
 
 ---
 
@@ -67,33 +75,38 @@
 2. Buka Git Bash di folder tersebut dan jalankan:  
    ```bash
    git add .
-   git commit -m "Deskripsi commit"
+   git commit -m "[Deskripsi commit]"
    git push origin main
    ```  
+   ![Alt Text](images/tambahfile.png)
 
 ---
 
 ### **D. Membuat Branch Baru**  
 1. Jalankan:  
    ```bash
-   git checkout -B "nama-branch"
+   git checkout -B [nama-branch]
    ```  
+   ![Alt Text](images/bikinbranchbaru.png)
 2. Untuk beralih ke branch lain:  
    ```bash
-   git checkout "nama-branch"
+   git checkout [nama-branch]
    ```  
+   ![Alt Text](images/pindahkebranchlain.png)
 
 ---
 
 ### **E. Menghapus Branch**  
 1. Beralih ke branch lain:  
    ```bash
-   git checkout "nama-branch-lain"
+   git checkout [nama-branch-lain]
    ```  
+   ![Alt Text](images/pindahkebranchlain.png)
 2. Hapus branch:  
    ```bash
-   git branch -d "nama-branch"
+   git branch -d [nama-branch]
    ```  
+   ![Alt Text](images/deletebranch.png)
 
 ---
 
@@ -104,10 +117,6 @@
    ```  
 2. Gabungkan branch lain:  
    ```bash
-   git merge "nama-branch"
+   git merge [nama-branch]
    ```  
-
----
-
-Panduan ini memberikan langkah-langkah utama untuk memulai dan mengelola repository GitHub dengan baik.
-```
+   ![Alt Text](images/mergingbranch.png)
